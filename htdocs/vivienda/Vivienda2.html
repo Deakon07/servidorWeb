@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vivienda 2</title>
+    <link rel="stylesheet" href="vivienda.css" />
+  </head>
+  <body>
+    <h1>Inserción de vivienda 2</h1>
+
+    <p>Introduzca los datos de la vivienda:</p>
+
+    <form action="vivienda2.php" method="post" enctype="multipart/form-data">
+      <div class="recuadro">
+        <label for="vivienda">Tipo de vivienda</label>
+        <select name="vivienda" id="vivienda">
+          <option value="piso">Piso</option>
+          <option value="casa">Casa</option>
+          <option value="duplex">Duplex</option>
+          <option value="atico">Ático</option></select>
+        <br /><br />
+
+        <label for="zona">Zona:</label>
+        <select name="zona" id="zona">
+          <option value="Sevilla">Sevilla</option>
+          <option value="Tomares">Tomares</option>
+          <option value="Castilleja de la Cuesta">Castilleja de la Cuesta</option>
+          <option value="Villanueva del Ariscal">Villanueva del Ariscal</option>
+          <option value="Salteras">Salteras</option>
+          <option value="Gines">Gines</option>
+          <option value="Bormujos">Bormujos</option>
+          <option value="Camas">Camas</option>
+        </select>
+
+        <br /><br />
+
+        <label for="direccion">Dirección:</label>
+        <input
+          type="text"
+          name="direccion"
+          id="direccion"
+          maxlength="200"
+          pattern="[A-Za-z0-9ºª\s/.,-]"/>
+        <br /><br />
+        <span style="color: red;"><?php echo $errorDireccion; ?></span>
+
+        <br /><br />
+
+        <label for="dormitorios">Número de dormitorios:</label>
+        <input type="radio" name="dormitorios" id="1" value="1" />1
+        <input type="radio" name="dormitorios" id="2" value="2" />2
+        <input type="radio" name="dormitorios" id="3" value="3" />3
+        <input type="radio" name="dormitorios" id="4" value="4" />4
+        <input type="radio" name="dormitorios" id="5" value="5" />5 <br /><br />
+        <span style="color: red;"><?php echo $errorDormitorios; ?></span>
+        <br /><br />
+
+        <label for="precio">Precio:</label>
+        <input
+          type="number"
+          name="precio"
+          id="precio"
+          min="0"
+          maxlength="10"
+          size="7"
+        />
+        € <br /><br />
+        <span style="color: red;"><?php echo $errorPrecio; ?></span>
+            <br /><br />
+
+        <label for="tamano">Tamaño:</label>
+        <input
+          type="number"
+          name="tamano"
+          id="tamano"
+          min="0"
+          maxlength="10"
+          size="7"
+        />
+        metros cuadrados <br /><br />
+        metros cuadrados
+            <span style="color: red;"><?php echo $errorTamano; ?></span>
+            <br /><br />
+
+        <label for="extras">Extras (marque los que procedan):</label>
+        <input
+          type="checkbox"
+          name="extras[]"
+          id="piscina"
+          value="Piscina"
+        />Piscina
+        <input
+          type="checkbox"
+          name="extras[]"
+          id="jardin"
+          value="Jardín"
+        />Jardín
+        <input
+          type="checkbox"
+          name="extras[]"
+          id="garaje"
+          value="Garaje"
+        />Garaje <br /><br />
+        <span style="color: red;"><?php echo $errorExtras; ?></span>
+        <br /><br />
+
+        <input type="file" name="imagen" />
+        <input
+          type="submit"
+          name="subirImagen"
+          value="Enviar imagen"
+          height="50"
+          width="50"
+        />
+        <br />
+        <br /><br />
+
+        <label for="observaciones">Observaciones:</label>
+        <textarea
+          name="observaciones"
+          rows="10"
+          cols="50"
+          maxlength="200"
+        ></textarea>
+        <br /><br />
+        <span style="color: red;"><?php echo $errorObservaciones; ?></span>
+        <br /><br />
+
+        <input type="submit" value="Insertar vivienda" name="insertar" />
+      </div>
+    </form>
+  </body>
+</html>

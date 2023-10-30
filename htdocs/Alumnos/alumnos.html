@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alumnos</title>
+  </head>
+  <body>
+    <h1>Inserta alumnos en la base de datos</h1>
+    <form action="pruebaAlumnos.php" method="post">
+      <p><label for="nombre">Nombre: <input type="text" name="nombre" id="nombre"/></label></p>
+      <p></p><label for="apellidos">Apellidos: <input type="text" name="apellidos" id="apellidos" /></label></p>
+      <p><label for="curso">Curso: <select name="curso" id="curso">
+        <option value="primero">PRIMERO</option>
+        <option value="segundo">SEGUNDO</option></select></label></p>
+        <p><label for="ciclo">Ciclo: <select name="ciclo" id="ciclo">
+            <option value="ciclo">DAM</option>
+            <option value="cilo">DAW</option>
+            <option value="ciclo">ASIR</option>
+            <option value="ciclo">NADA</option></select></label></p>
+      <p><label for="nota_final">Nota: <input type="number" name="nota_final" id="nota_final" /></label></p>
+      <input type="submit" value="Agregar alumno">
+    </form>
+
+  </body>
+</html>

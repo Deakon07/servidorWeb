@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practica 1</title>
+    <link rel="stylesheet" href="practica1.css" />
+  </head>
+  <body>
+    <h1>Inserción de vivienda</h1>
+
+    <p>Introduzca los datos de la vivienda:</p>
+
+    <form action="practica1.php" method="post" >
+    <div class="recuadro">
+     <label for="vivienda" name="vivienda">Tipo de vivienda </label>
+    <select name="vivienda" id="vivienda">
+    <option>piso</option>
+    <option>casa</option></select>
+    <br>
+    <br>
+
+      <label for="zona" name="zona">Zona:</label>
+      <select name="zona" id="zona">
+        <option>Nervion</option>
+        <option>Aljarafe</option></select>
+      </select>
+      <br>
+    <br>
+
+      <label for="direccion" name="direccion">Dirección:</label>
+      <input type="text" name="direccion" id="direccion"></p>
+
+      <label for="dormitorios">Número de dormitorios:</label>
+      <input type="radio" name="dormitorios" id="1"></label><label for="dormitorios">1 
+      <input type="radio" name="dormitorios" id="2"></label><label for="dormitorios">2
+      <input type="radio" name="dormitorios" id="3"></label><label for="dormitorios">3
+      <input type="radio" name="dormitorios" id="4"></label><label for="dormitorios">4
+      <input type="radio" name="dormitorios" id="5"></label><label for="dormitorios">5
+        <br>
+        <br>
+      
+    
+        <label for="precio" name="precio">Precio:</label>
+        <input type="number" name="precio" id="6"> € 
+        <br>
+    <br>
+        <label for="tamano" name="tamano">Tamaño:</label>
+       
+        <input type="number" name="tamano" id="7"> metros cuadrados
+        <br>
+    <br>
+        <label for="extras">Extras(marque los que procedan):</label>
+        <input type="checkbox" name="extras" id="8">Piscina
+        <input type="checkbox" name="extras" id="9">Jardín
+        <input type="checkbox" name="extras" id="10">Garaje
+        <br>
+    <br>
+        <label for="observaciones" name=" observaciones">Observaciones:</label><textarea name="textarea" rows="10" cols="50"></textarea>
+        <br>
+    <br>
+        <input type="submit" value="Insertar vivienda">
+</form>
+    
+    </div>
+  </body>
+</html>
